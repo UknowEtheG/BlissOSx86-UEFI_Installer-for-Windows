@@ -257,7 +257,7 @@ namespace Android_UEFIInstaller
             //Set config.remixos
 
             string ExecutablePath = Environment.CurrentDirectory + @"\7z.exe";
-            string ExecutableArgs = String.Format(" e \"{0}\" \"efi\\boot\\grub.cfg\" -o{1}", ISOFilePath, ExtractDirectory);
+            string ExecutableArgs = String.Format(" e \"{0}\" \"boot\\grub\\grub.cfg\" -o{1}", ISOFilePath, ExtractDirectory);
 
             Log.updateStatus("Status: Check Android variant type...");
             if (!ExecuteCLICommand(ExecutablePath, ExecutableArgs))
