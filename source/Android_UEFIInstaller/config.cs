@@ -17,7 +17,7 @@ namespace Android_UEFIInstaller
         public const String INSTALL_DIR = @"{0}:\" + INSTALL_FOLDER;
         
         /* UEFI Config */
-        public const String UEFI_DIR = @"\EFI\Android\";
+        public const String UEFI_DIR = @"\EFI\boot\";
         public const String UEFI_PARTITION_MOUNTPOINT = "Z:";
         public const String UEFI_GRUB_BIN64 = "grubx64.efi";
         public const String UEFI_GRUB_BIN32 = "grubia32.efi";
