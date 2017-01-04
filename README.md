@@ -5,7 +5,6 @@ This installer will help users install Android-x86 on PC from windows, without H
 
 ## Features
 - Support UEFI-Enabled PCs
-- Support Legacy-BIOS PCs
 - Install/Uninstall Android directly from Windows
 - Install to Any FAT32/NTFS partitions
 - No partition formatting or any data corruption
