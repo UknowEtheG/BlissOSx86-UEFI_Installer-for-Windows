@@ -92,7 +92,7 @@ namespace Android_UEFIInstaller
             return true;
 
         cleanup:
-            Log.updateStatus("Installation failed, Rolling back");
+            Log.updateStatus("Installation failed! Rolling back");
             Log.write("==============Revert Installation==============");
             cleanup(InstallDirectory);
             UnInstallBootObjects(null);
@@ -172,8 +172,8 @@ namespace Android_UEFIInstaller
             //
             //Extracting ISO Contents
             //
-            Log.updateStatus("Status: Extract ISO... Please wait");
-            Log.write("-Extract ISO");
+            Log.updateStatus("Status: Extracting ISO... Please wait");
+            Log.write("-Extracting ISO");
             if (!ExecuteCLICommand(ExecutablePath, ExecutableArgs))
                 return false;
 
@@ -189,8 +189,8 @@ namespace Android_UEFIInstaller
             //
             //Extracting System.sfs
             //
-            Log.updateStatus("Status: Extract SFS... Please wait");
-            Log.write("-Extract SFS");
+            Log.updateStatus("Status: Extracting SFS... Please wait");
+            Log.write("-Extracting SFS");
             if (!ExecuteCLICommand(ExecutablePath, ExecutableArgs))
                 return false;
 
@@ -202,8 +202,8 @@ namespace Android_UEFIInstaller
         private Boolean CreateDataParition(String directory,String Size)
         {
             
-            Log.updateStatus("Status: Create Data.img... Please wait");
-            Log.write("-Create Data.img");
+            Log.updateStatus("Status: Creating Data.img... Please wait");
+            Log.write("-Creating Data.img");
 
             string ExecutablePath = Environment.CurrentDirectory + @"\dd.exe";
             string ExecutableArgs = String.Format(@"if=/dev/zero of={0}\data.img count={1}", directory, Size.ToString());
@@ -289,7 +289,7 @@ namespace Android_UEFIInstaller
     
         protected virtual bool cleanup(String directory)
         {
-            Log.write("-Cleaning up Android Directory ... " + directory);
+            Log.write("-Cleaning up Bliss Directory ... " + directory);
             try
             {
                 //Check if Directory Exist
@@ -330,7 +330,7 @@ namespace Android_UEFIInstaller
                 case InstallationStep.CREATE_DIRECTORIES:
                     String dir = info as String;
                     Log.write("Error: Folder Exist > " + dir);
-                    //System.Windows.MessageBox.Show(dir + " Already Exist\n" + "Installation Process will Stop", "Error", System.Windows.forms.MessageBoxButtons.OK);
+                    //System.Windows.MessageBox.Show(dir + " Already Exist\n" + "Aborting Installation Process", "Error", System.Windows.forms.MessageBoxButtons.OK);
                     break;
 
                 default:
