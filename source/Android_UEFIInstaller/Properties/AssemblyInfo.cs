@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Android_UEFIInstaller")]
 [assembly: AssemblyDescription("Android x86 Installer for Windows [UEFI Version]")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ExtremeGTX")]
+[assembly: AssemblyCompany("Bliss Studios")]
 [assembly: AssemblyProduct("Android_UEFIInstaller")]
-[assembly: AssemblyCopyright("Copyright © ExtremeGTX 2015")]
+[assembly: AssemblyCopyright("Copyright © Bliss Studios 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +51,5 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.5.0000.0")]
-[assembly: AssemblyFileVersion("2.5.0.0")]
+[assembly: AssemblyVersion("2.6.0000.0")]
+[assembly: AssemblyFileVersion("2.6.0.0")]

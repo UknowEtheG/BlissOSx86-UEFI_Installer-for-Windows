@@ -58,11 +58,12 @@ namespace Android_UEFIInstaller
              * System.sfs found extract it
              * System.sfs included in Androidx86 dist and not found with RemixOS
              */
-            if (File.Exists(InstallDirectory + @"\system.sfs" ))
-            {
-                if (!ExtractSFS(InstallDirectory))
-                    goto cleanup;
-            }
+            /*if (File.Exists(InstallDirectory + @"\system.sfs" ))
+             *{
+             *    if (!ExtractSFS(InstallDirectory))
+             *        goto cleanup;
+             *}
+            */
 
             if(!DetectAndroidVariant(ISOFilePath,InstallDirectory))
                 goto cleanup;
@@ -70,7 +71,7 @@ namespace Android_UEFIInstaller
             String[] FileList = {InstallDirectory + @"\kernel",
                                 InstallDirectory + @"\initrd.img",
                                 InstallDirectory + @"\ramdisk.img",
-                                InstallDirectory + @"\system.img",
+                                InstallDirectory + @"\system.sfs",
                                 };
             if (!VerifyFiles(FileList))
                 goto cleanup;

@@ -18,87 +18,87 @@
 		Loaded="Window_Loaded" Icon="images/Android 512.png"
 		>
 
-	<Grid>
-		<StackPanel>
-			<wpf:ColorZone Height="150" Padding="16" Effect="{StaticResource MaterialDesignShadowDepth2}" Mode="PrimaryMid">
-				<Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Right" ToolTip="About">
-					<Image Source="images/ic_list_white_48dp_2x.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="24" SnapsToDevicePixels="True"/>
-				</Button>
-			</wpf:ColorZone>
+    <Grid>
+        <StackPanel>
+            <wpf:ColorZone Height="150" Padding="16" Effect="{StaticResource MaterialDesignShadowDepth2}" Mode="PrimaryMid">
+                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Right" ToolTip="About">
+                    <Image Source="images/ic_list_white_48dp_2x.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="24" SnapsToDevicePixels="True"/>
+                </Button>
+            </wpf:ColorZone>
 
-			<wpf:ColorZone Padding="16" Effect="{StaticResource MaterialDesignShadowDepth2}"
+            <wpf:ColorZone Padding="16" Effect="{StaticResource MaterialDesignShadowDepth2}"
 				Mode="PrimaryDark">
-			</wpf:ColorZone>
-		</StackPanel>
+            </wpf:ColorZone>
+        </StackPanel>
 
-		<wpf:ColorZone Padding="16" Effect="{StaticResource MaterialDesignShadowDepth2}"
+        <wpf:ColorZone Padding="16" Effect="{StaticResource MaterialDesignShadowDepth2}"
 			 Margin="100,90,0,0" Width="600" HorizontalAlignment="Left" VerticalAlignment="Top">
 
 
-			<Grid>
-				<Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Stretch="Uniform" Width="60"
+            <Grid>
+                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Stretch="Uniform" Width="60"
 					   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Source="images/Android 512.png"/>
 
-				<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,20,0,0">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="100*"/>
-						<ColumnDefinition Width="150*"/>
-					</Grid.ColumnDefinitions>
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="150*"/>
+                    </Grid.ColumnDefinitions>
 
-					<Grid.RowDefinitions>
-						<RowDefinition Height="50*" />
-						<RowDefinition Height="20*" />
-						<RowDefinition Height="20*" />
-					</Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50*" />
+                        <RowDefinition Height="20*" />
+                        <RowDefinition Height="20*" />
+                    </Grid.RowDefinitions>
 
 
-					<TextBlock Grid.Column="1" Grid.Row="0" Text="Android x86" FontSize="18" HorizontalAlignment="Left"/>
-					<TextBlock Grid.Column="1" Grid.Row="1" Text="ExtremeGTX" FontSize="12" Foreground="Gray"  HorizontalAlignment="Left" />
-					<TextBlock Name="txtVersion" Grid.Column="1" Grid.Row="2" Text="Version 1.0.0.0" FontSize="12" Foreground="Gray" HorizontalAlignment="Left"/>
-				</Grid>
-				<TextBox Name="txtlog" HorizontalAlignment="Right" Height="80" Text="" VerticalAlignment="Top" Width="350" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" IsReadOnly="True" Style="{x:Null}" FontSize="11" FontStyle="Normal" TextChanged="txtlog_TextChanged"/>
-				<!-- Install button -->
-				<Button Name="cmdInstall" Content="Install" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20" IsEnabled="False" Click="Button_Click"/>
-				<Button Name="cmdRemove" Content="Cleanup Android"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,130,20" Style="{StaticResource MaterialDesignRaisedAccentButton}" Click="Button_Click_1"/>
-				<!-- Installation Status -->
-				<StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="10,0,0,30">
-					<TextBlock Name="lblStatus"  Text="Status: Ready" FontSize="12" HorizontalAlignment="Left"/>
-					<ProgressBar Name="pbarStatus" Width="250" Value="0" HorizontalAlignment="Left"/>
-				</StackPanel>
-				<!-- Gray separator -->
-				<Rectangle Fill="LightGray" Height="1" Margin="0,0,0,150" Width="500" />
-				<!-- Description -->
-				<TextBlock FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,100"
-						   Text ="This installer will help you install Android x86 for you Device,This version targets UEFI Devices&#xA;and modern Windows 8 Devices. No partitions will be formatted and no data will be corrupted"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Text="Android x86" FontSize="18" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Text="Bliss Studios" FontSize="12" Foreground="Gray"  HorizontalAlignment="Left" />
+                    <TextBlock Name="txtVersion" Grid.Column="1" Grid.Row="2" Text="Version 1.0.0.0" FontSize="12" Foreground="Gray" HorizontalAlignment="Left"/>
+                </Grid>
+                <TextBox Name="txtlog" HorizontalAlignment="Right" Height="80" Text="" VerticalAlignment="Top" Width="350" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" IsReadOnly="True" Style="{x:Null}" FontSize="11" FontStyle="Normal" TextChanged="txtlog_TextChanged"/>
+                <!-- Install button -->
+                <Button Name="cmdInstall" Content="Install" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20" IsEnabled="False" Click="Button_Click"/>
+                <Button Name="cmdRemove" Content="Cleanup Android"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,130,20" Style="{StaticResource MaterialDesignRaisedAccentButton}" Click="Button_Click_1"/>
+                <!-- Installation Status -->
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="10,0,0,30">
+                    <TextBlock Name="lblStatus"  Text="Status: Ready" FontSize="12" HorizontalAlignment="Left"/>
+                    <ProgressBar Name="pbarStatus" Width="250" Value="0" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <!-- Gray separator -->
+                <Rectangle Fill="LightGray" Height="1" Margin="0,0,0,150" Width="500" />
+                <!-- Description -->
+                <TextBlock FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="27,106,27,176"
+						   Text ="This installer will help you install Android x86 for you Device,This version targets UEFI Devices&#xA;and modern Windows 8 Devices. No partitions will be formatted and no data will be corrupted" Height="58"/>
                 <!-- Installation options -->
-				<Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,180,0,70" >
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="50*"/>
-						<ColumnDefinition Width="100*"/>
-						<ColumnDefinition Width="100*"/>
-					</Grid.ColumnDefinitions>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,180,0,70" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
 
-					<Grid.RowDefinitions>
-						<RowDefinition Height="30" />
-						<RowDefinition Height="30" />
-						<RowDefinition Height="30" />
-					</Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
 
-					<!-- Image Path -->
-					<TextBlock Grid.Column="0" Grid.Row="0" Text="Android Image" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Margin="0,0,10,0" />
-					<TextBox  Name="txtISOPath" Grid.Column="1" Grid.Row="0" Text="Android .img file" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12" Width="150" IsReadOnly="True" Foreground="Gray"/>
-					<Image Name="ImgCmdBrowse" Grid.Column="2" Grid.Row="0" Source="images\ic_launch_black_24dp_1x.png" Width="16" Stretch="Uniform" Margin="10,0,0,0" MouseUp="Image_MouseUp" ToolTip="Click to Browse android os .img file" HorizontalAlignment="Left"/>
-					<!-- Target Partition -->
-					<TextBlock Grid.Column="0" Grid.Row="1" Text="Target Drive" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12" Margin="0,0,10,0" />
-					<ComboBox Name="cboDrives" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Width="150" Height="20" Foreground="Gray" SelectionChanged="cboDrives_SelectionChanged"/>
-					<!-- Data Size -->
-					<TextBlock Grid.Column="0" Grid.Row="2" Text="  Data Size" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12" Margin="0,0,10,0" />
-					<Slider Name="sldrSize" Grid.Column="1" Grid.Row="2" Maximum="100" Value="20" VerticalAlignment="Center" Margin="0,0,0,0" SmallChange="1" TickFrequency="10" IsSnapToTickEnabled="True" />
-					<TextBlock Grid.Column="2" Grid.Row="2" FontSize="12" Text="{Binding ElementName=sldrSize,Path=Value , StringFormat={}{0:0.0} GB}" VerticalAlignment="Center" Width="50" Margin="10,0,0,0" />
+                    <!-- Image Path -->
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Android Image" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Margin="0,0,10,0" />
+                    <TextBox  Name="txtISOPath" Grid.Column="1" Grid.Row="0" Text="Android .img file" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12" Width="150" IsReadOnly="True" Foreground="Gray"/>
+                    <Image Name="ImgCmdBrowse" Grid.Column="2" Grid.Row="0" Source="images\ic_launch_black_24dp_1x.png" Width="16" Stretch="Uniform" Margin="10,0,0,0" MouseUp="Image_MouseUp" ToolTip="Click to Browse android os .img file" HorizontalAlignment="Left"/>
+                    <!-- Target Partition -->
+                    <TextBlock Grid.Column="0" Grid.Row="1" Text="Target Drive" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12" Margin="0,0,10,0" />
+                    <ComboBox Name="cboDrives" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Width="150" Height="20" Foreground="Gray" SelectionChanged="cboDrives_SelectionChanged"/>
+                    <!-- Data Size -->
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="  Data Size" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12" Margin="0,0,10,0" />
+                    <Slider Name="sldrSize" Grid.Column="1" Grid.Row="2" Maximum="100" Value="20" VerticalAlignment="Center" Margin="0,0,0,0" SmallChange="1" TickFrequency="10" IsSnapToTickEnabled="True" />
+                    <TextBlock Grid.Column="2" Grid.Row="2" FontSize="12" Text="{Binding ElementName=sldrSize,Path=Value , StringFormat={}{0:0.0} GB}" VerticalAlignment="Center" Width="50" Margin="10,0,0,0" />
 
-				</Grid>
-			</Grid>
-		</wpf:ColorZone>
+                </Grid>
+            </Grid>
+        </wpf:ColorZone>
 
-	</Grid>
+    </Grid>
 </Window>
