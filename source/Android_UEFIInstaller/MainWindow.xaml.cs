@@ -272,9 +272,9 @@ namespace Android_UEFIInstaller
 
             //if (!u.Install(Environment.CurrentDirectory + @"\android-x86-4.4-r2.img", "E", "1000"))
             if (!u.Install(txtISOPath.Text,cboDrives.Text.Substring(0,1), cboSize.Text))
-                MessageBox.Show("Install Failed");
+                MessageBox.Show("Install Failed!");
             else
-                MessageBox.Show("Install Done");
+                MessageBox.Show("Install Bliss-x86!");
 
             EnableUI();
         }
@@ -283,7 +283,7 @@ namespace Android_UEFIInstaller
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (MessageBoxResult.No == MessageBox.Show("Are you sure you want to remove android ?", "Android Installer", MessageBoxButton.YesNo, MessageBoxImage.Question))
+            if (MessageBoxResult.No == MessageBox.Show("Are you sure you want to remove Bliss-x86?", "Bliss Installer", MessageBoxButton.YesNo, MessageBoxImage.Question))
                 return;
 
             DisableUI();
